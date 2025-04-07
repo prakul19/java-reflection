@@ -11,7 +11,7 @@ public class AccessPrivateField {
         try {
             Person person = new Person();
             Class<?> cls = person.getClass();
-            // Get the age which is private
+            // Get the age
             Field ageField = cls.getDeclaredField("age");
             ageField.setAccessible(true);
             ageField.set(person, 40);
